@@ -1,5 +1,64 @@
-# ElectionSystem
+# Election System
 
+## Overview
+
+The Election System is a command-line Java application designed to simulate and manage regional elections. It processes voter preferences, validates votes, and outputs the results directly to the console. The system reads input data from a file located in the `src/main/resources` directory and displays the election outcomes on the command line interface.
+
+## Prerequisites
+
+* Java 17 or higher
+* Maven (for dependency management and building the project)
+* Git (for version control)
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Pradeep09102/ElectionSystem.git
+   cd ElectionSystem
+   ```
+
+2. Build the project using Maven:
+
+   ```bash
+   mvn clean install
+   ```
+
+3. Ensure the `voting.dat` file is located in the `src/main/resources` directory. This file contains the election data in the following format:
+
+   ```
+   Hyderabad/ABCFGHKLM
+   Warangal/BCDHIJNOP
+   Nizamabad/AEFGQRSUV
+   Karimnagar/BCGHJKLWX
+   Khammam/ABDEFTUVW
+   ```
+
+4. Run the application:
+
+   ```bash
+   mvn exec:java -Dexec.mainClass="com.electionsystem.ElectionSystemMain"
+   ```
+
+   The system will process the votes and display the results in the console.
+
+## Data Format
+
+The `voting.dat` file should contain:
+
+* **Region Names**: Each line starts with a region name followed by a slash (`/`).
+* **Candidate Codes**: After the slash, a string of uppercase letters representing the candidates in that region.
+
+Example:
+
+```
+Hyderabad/ABCFGHKLM
+Warangal/BCDHIJNOP
+Nizamabad/AEFGQRSUV
+Karimnagar/BCGHJKLWX
+Khammam/ABDEFTUVW
+```
 
  ELECTION SYSTEM - RESULTS
 ========================================
